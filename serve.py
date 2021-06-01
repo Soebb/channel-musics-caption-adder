@@ -1,14 +1,13 @@
 import os
 from config import Config
 
-token=Config.TOKEN
-
 BOT_CHAT_ID=Config.BOT_CHAT_ID
 USERNAME=Config.USERNAME
 
 
 from telegram.ext import Updater, Filters, MessageHandler
 
+token=Config.TOKEN
 
 def file_handler(update, context):
     """File handler for fowarding images and files to BOT_CHAT_ID
