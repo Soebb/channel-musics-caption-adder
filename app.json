@@ -1,10 +1,6 @@
 {
-  "name": "TMF",
-}
-  },
-  "buildpacks": [
-    {
+  "name": "container",
+"buildpacks": [{
       "url": "heroku/python"
-    }
-  ]
+    }]
 }
