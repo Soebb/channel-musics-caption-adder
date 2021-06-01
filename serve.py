@@ -2,9 +2,7 @@ import os
 from telegram.ext import Updater, Filters, MessageHandler
 
 from config import Config
-
-
-token = Config.TOKEN
+    token = Config.TOKEN
 BOT_CHAT_ID=Config.BOT_CHAT_ID
 USERNAME=Config.USERNAME
 
