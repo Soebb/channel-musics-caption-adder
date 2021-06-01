@@ -1,3 +1,7 @@
+#!/usr/bin/env python3
+
+# Author: Racter Liu (Racterub / root@racterub.me)
+
 from telegram.ext import Updater, Filters, MessageHandler
 from config import TOKEN, BOT_CHAT_ID, USERNAME
 
