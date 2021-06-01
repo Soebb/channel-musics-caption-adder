@@ -16,11 +16,12 @@ def file_handler(update, context):
         # File
         fileID = update.message['audio']['file_id']
         fileName = update.message['audio']['file_name']
+        performer = update.message['audio']['performer']
         caption = update.message['caption']
         context.bot.sendAudio(
             chat_id = -1001264182630,
             filename = fileName,
-            caption = fileName,
+            caption = performer,
             audio = fileID
         )
     else:
