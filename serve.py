@@ -16,11 +16,11 @@ def file_handler(update, context):
         # File
         fileID = update.message['document']['file_id']
         fileName = update.message['document']['file_name']
-        caption = update.message['file_name']
+        caption = update.message['caption']
         context.bot.sendDocument(
             chat_id = -1001264182630,
             filename = fileName,
-            caption = caption,
+            caption = fileName,
             document = fileID
         )
     else:
