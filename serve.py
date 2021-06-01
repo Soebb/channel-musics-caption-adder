@@ -47,14 +47,14 @@ if __name__=='__main__':
     #Add Image/File handler
     dispatcher.add_handler(
         MessageHandler(
-            (Filters.document | Filters.photo) & Filters.user(username=f"@{Pgffhjsejahjj}"),
+            (Filters.document | Filters.photo) & Filters.user(username=f"@Pgffhjsejahjj"),
         file_handler
         )
     )
     #Add Message handler
     dispatcher.add_handler(
         MessageHandler(
-            (Filters.text | (~Filters.command)) & Filters.user(username=f"@{Pgffhjsejahjj}"),
+            (Filters.text | (~Filters.command)) & Filters.user(username=f"@Pgffhjsejahjj"),
             message_handler
         )
     )
