@@ -1,7 +1,4 @@
-#!/usr/bin/env python3
-
-# Author: Racter Liu (Racterub / root@racterub.me)
-
+import os
 from config import Config
 from telegram.ext import Updater, Filters, MessageHandler
 
@@ -19,7 +16,7 @@ def file_handler(update, context):
         fileName = update.message['document']['file_name']
         caption = update.message['caption']
         context.bot.sendDocument(
-            chat_id = BOT_CHAT_ID,
+            chat_id = Config.BOT_CHAT_ID,
             filename = fileName,
             caption = caption,
             document = fileID
@@ -29,33 +26,33 @@ def file_handler(update, context):
         fileID = update.message['photo'][-1]['file_id']
         caption = update.message['caption']
         context.bot.sendPhoto(
-        chat_id = BOT_CHAT_ID,
+        chat_id = Config.BOT_CHAT_ID,
         caption = caption,
         photo = fileID
     )
 
 def message_handler(update, context):
     context.bot.sendMessage(
-        chat_id=BOT_CHAT_ID,
+        chat_id=Config.BOT_CHAT_ID,
         text=f"{update.message.text}"
     )
 
 
 if __name__=='__main__':
-    updater = Updater(token=TOKEN, use_context=True)
+    updater = Updater(token=Config.TOKEN, use_context=True)
     dispatcher = updater.dispatcher
 
     #Add Image/File handler
     dispatcher.add_handler(
         MessageHandler(
-            (Filters.document | Filters.photo) & Filters.user(username=f"@{USERNAME}"),
+            (Filters.document | Filters.photo) & Filters.user(username=f"@{Config.USERNAME}"),
         file_handler
         )
     )
     #Add Message handler
     dispatcher.add_handler(
         MessageHandler(
-            (Filters.text | (~Filters.command)) & Filters.user(username=f"@{USERNAME}"),
+            (Filters.text | (~Filters.command)) & Filters.user(username=f"@{Config.USERNAME}"),
             message_handler
         )
     )
