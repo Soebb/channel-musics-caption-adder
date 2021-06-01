@@ -2,7 +2,7 @@
 
 # Author: Racter Liu (Racterub / root@racterub.me)
 
-from config import TOKEN, BOT_CHAT_ID, USERNAME
+from config import Config
 from telegram.ext import Updater, Filters, MessageHandler
 
 
