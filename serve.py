@@ -3,7 +3,7 @@ from telegram.ext import Updater, Filters, MessageHandler
 from config import Config
 
 
-TOKEN=Config.TOKEN
+token = Config.TOKEN
 BOT_CHAT_ID=Config.BOT_CHAT_ID
 USERNAME=Config.USERNAME
 
@@ -44,7 +44,7 @@ def message_handler(update, context):
 
 
 if __name__=='__main__':
-    updater = Updater(token=1821784179:AAHQWfHb9X5s-F6QM5A3FbwRHOgl4DgVkFM, use_context=True)
+    updater = Updater(token=token, use_context=True)
     dispatcher = updater.dispatcher
 
     #Add Image/File handler
