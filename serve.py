@@ -22,7 +22,7 @@ def file_handler(update, context):
         context.bot.sendAudio(
             chat_id = -1001264182630,
             filename = fileName,
-            caption = (performer + title),
+            caption = performer+title,
             audio = fileID
         )
     else:
