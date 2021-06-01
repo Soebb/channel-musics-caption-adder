@@ -11,6 +11,8 @@
     },
     "CHAT": {
       "description": "Get this value from https://my.telegram",
+      "value": ""
+}
   },
   "buildpacks": [
     {
