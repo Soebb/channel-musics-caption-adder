@@ -1,15 +1,15 @@
 {
   "name": "TMF",
   "env": {
-    "TOKEN": {
+    "TOKENNN": {
       "description": "Your bot token, as a string.",
       "value": ""
     },
-    "USERNAME": {
+    "USERNAMEEE": {
       "description": "Get this value from https://my.telegram.org",
       "value": ""
     },
-    "CHAT": {
+    "CHATTT": {
       "description": "Get this value from https://my.telegram",
       "value": ""
 }
