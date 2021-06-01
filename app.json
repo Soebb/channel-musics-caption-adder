@@ -1,0 +1,20 @@
+{
+  "name": "TMF",
+  "env": {
+    "TOKEN": {
+      "description": "Your bot token, as a string.",
+      "value": ""
+    },
+    "USERNAME": {
+      "description": "Get this value from https://my.telegram.org",
+      "value": ""
+    },
+    "CHAT": {
+      "description": "Get this value from https://my.telegram",
+  },
+  "buildpacks": [
+    {
+      "url": "heroku/python"
+    }
+  ]
+}
