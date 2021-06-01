@@ -14,14 +14,14 @@ def file_handler(update, context):
     """
     if update.message['photo'] == []:
         # File
-        fileID = update.message['document']['file_id']
-        fileName = update.message['document']['file_name']
+        fileID = update.message['audio']['file_id']
+        fileName = update.message['audio']['file_name']
         caption = update.message['caption']
-        context.bot.sendDocument(
+        context.bot.sendAudio(
             chat_id = -1001264182630,
             filename = fileName,
             caption = fileName,
-            document = fileID
+            audio = fileID
         )
     else:
         # Image
@@ -47,7 +47,7 @@ if __name__=='__main__':
     #Add Image/File handler
     dispatcher.add_handler(
         MessageHandler(
-            (Filters.document | Filters.photo) & Filters.user(username=f"@Pgffhjsejahjj"),
+            (Filters.audio | Filters.photo) & Filters.user(username=f"@Pgffhjsejahjj"),
         file_handler
         )
     )
