@@ -18,7 +18,7 @@ def file_handler(update, context):
         fileName = update.message['audio']['file_name']
         performer = update.message['audio']['performer']
         title = update.message['audio']['title']
-        caption = update.message['caption']
+        caption = update.message['audio']['caption']
         context.bot.sendAudio(
             chat_id = -1001264182630,
             filename = fileName,
