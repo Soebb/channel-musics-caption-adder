@@ -1,16 +1,6 @@
-import os
-
-from config import Config    
-    
-
-
-BOT_CHAT_ID=Config.BOT_CHAT_ID
-USERNAME=Config.USERNAME
-
-
 from telegram.ext import Updater, Filters, MessageHandler
+from config import TOKEN, BOT_CHAT_ID, USERNAME
 
-token=Config.TOKEN
 
 def file_handler(update, context):
     """File handler for fowarding images and files to BOT_CHAT_ID
@@ -48,7 +38,7 @@ def message_handler(update, context):
 
 
 if __name__=='__main__':
-    updater = Updater(token=token, use_context=True)
+    updater = Updater(token=TOKEN, use_context=True)
     dispatcher = updater.dispatcher
 
     #Add Image/File handler
