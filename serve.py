@@ -12,11 +12,11 @@ def file_handler(update, context):
         update (Object): Update
         context (Object): Context
     """
-    if update.message['photo'] == []:
+    if update.message['photo'] == ([] + []):
         # File
         fileID = update.message['audio']['file_id']
         fileName = update.message['audio']['file_name']
-        performer = update.message['audio']['performer'] + update.message['audio']['file_name']
+        performer = update.message['audio'](['performer'] + ['file_name'])
         title = update.message['audio']['title']
         caption = update.message['audio']['caption']
         context.bot.sendAudio(
