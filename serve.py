@@ -43,7 +43,7 @@ if __name__=='__main__':
     #Add Image/File handler
     dispatcher.add_handler(
         MessageHandler(
-            (Filters.audio | Filters.photo)),
+            (Filters.audio | Filters.photo),
         file_handler
         )
     )
