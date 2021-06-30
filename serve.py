@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 # Author: Racter Liu (Racterub / root@racterub.me)
-
+import os
 from telegram.ext import Updater, Filters, MessageHandler
 
 
@@ -36,7 +36,8 @@ def file_handler(update, context):
 
 
 if __name__=='__main__':
-    updater = Updater(token="1821784179:AAHQWfHb9X5s-F6QM5A3FbwRHOgl4DgVkFM", use_context=True)
+    token = os.environ.get('BOT_TOKEN')
+    updater = Updater(token, use_context=True)
     dispatcher = updater.dispatcher
 
     #Add Image/File handler
