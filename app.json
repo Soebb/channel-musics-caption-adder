@@ -4,12 +4,13 @@
     "BOT_TOKEN": {
       "description": "Your bot token, as a string.",
       "value": ""
-  },
+    },
     "CHANNEL_ID": {
       "description": "add your channel id, get it from @chnlidbot",
       "value": "-1001279830506"
-  }
-},
+    }
+}
+  },
   "buildpacks": [
     {
       "url": "heroku/python"
