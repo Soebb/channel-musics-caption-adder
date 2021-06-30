@@ -2,6 +2,7 @@
 
 # Author: Racter Liu (Racterub / root@racterub.me)
 import os
+import constants
 from telegram import Update
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters, CallbackContext
 
