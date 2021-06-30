@@ -18,8 +18,9 @@ def file_handler(update, context):
         fileName = update.message['audio']['file_name']
         performer = update.message['audio']['performer']
         title = update.message['audio']['title']
+        channel = os.environ.get('CHANNEL_ID')
         context.bot.sendAudio(
-            chat_id = -1001264182630,
+            chat_id = channel,
             filename = fileName,
             caption = performer + "-" + title,
             audio = fileID
@@ -28,8 +29,9 @@ def file_handler(update, context):
         # Image
         fileID = update.message['photo'][-1]['file_id']
         caption = update.message['caption']
+        channel = os.environ.get('CHANNEL_ID')
         context.bot.sendPhoto(
-        chat_id = -1001264182630,
+        chat_id = channel,
         caption = caption,
         photo = fileID
     )
