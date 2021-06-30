@@ -34,12 +34,6 @@ def file_handler(update, context):
         photo = fileID
     )
 
-def message_handler(update, context):
-    context.bot.sendMessage(
-        chat_id=-1001264182630,
-        text=f"{update.message.text}"
-    )
-
 
 if __name__=='__main__':
     updater = Updater(token="1821784179:AAHQWfHb9X5s-F6QM5A3FbwRHOgl4DgVkFM", use_context=True)
@@ -48,15 +42,8 @@ if __name__=='__main__':
     #Add Image/File handler
     dispatcher.add_handler(
         MessageHandler(
-            (Filters.audio | Filters.photo) & Filters.user(username=f"@Pgffhjsejahjj"),
+            (Filters.audio | Filters.photo)),
         file_handler
-        )
-    )
-    #Add Message handler
-    dispatcher.add_handler(
-        MessageHandler(
-            (Filters.text | (~Filters.command)) & Filters.user(username=f"@Pgffhjsejahjj"),
-            message_handler
         )
     )
 
