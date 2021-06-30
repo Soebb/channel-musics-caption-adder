@@ -2,8 +2,8 @@
 
 # Author: Racter Liu (Racterub / root@racterub.me)
 import os
-from telegram.ext import Updater, Filters, MessageHandler
-
+from telegram import Update
+from telegram.ext import Updater, CommandHandler, MessageHandler, Filters, CallbackContext
 
 def file_handler(update, context):
     """File handler for fowarding images and files to BOT_CHAT_ID
@@ -37,6 +37,11 @@ def file_handler(update, context):
     )
 
 
+def start(update: Update, context: CallbackContext) -> None:
+    """Send a message when the command /start is issued."""
+    update.message.reply_text(constants.welcome_text)
+
+
 if __name__=='__main__':
     token = os.environ.get('BOT_TOKEN')
     updater = Updater(token, use_context=True)
@@ -49,5 +54,7 @@ if __name__=='__main__':
         file_handler
         )
     )
+
+    dispatcher.add_handler(CommandHandler("start", start))
 
     updater.start_polling()
