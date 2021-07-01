@@ -2,7 +2,9 @@
 
 
 ## How use it?
-Just send musics to the bot, bot will post them with a dynamic caption in your channel as soon as they be received(in private).
+Add the bot in your channel as admin,     
+Then send musics to the bot,                 
+Bot will post them with a dynamic caption in your channel as soon as they be received(in private).
 
 
 ## Deploy to Heroku
