@@ -19,7 +19,6 @@ The added caption will be in this format :
 ```
 ✏️ Title: <title>
 👤 Artist: <artist>
-🎼 Genre: <genre>
 ```
 
 
