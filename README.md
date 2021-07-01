@@ -1,17 +1,29 @@
 # Channel Musics Caption Adder Bot
 
 
+
+## Deploy to Heroku
+
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/samadii/channel-musics-caption-adder)
+
+
+
 ## How to use it ?
 
 Add the bot in your channel as admin,     
 Then send musics to the bot,                 
 Bot will post them with a dynamic caption in your channel as soon as they be received(in private).
 
+The added caption will be in this format :
 
-## Deploy to Heroku
+```
+✏️ Title: <title>
+👤 Artist: <artist>
+💽 Album: <album>
+🎼 Genre: <genre>
+```
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/samadii/telegram-message-forwarder)
-
+<img src="https://github.com/samadii/channel-musics-caption-adder/blob/master/demo.png" width="450" />
 
 
 
