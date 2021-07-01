@@ -19,12 +19,11 @@ def file_handler(update, context):
         fileName = update.message['audio']['file_name']
         performer = update.message['audio']['performer']
         title = update.message['audio']['title']
-        genre = update.message['audio']['genre']
         channel = os.environ.get('CHANNEL_ID')
         context.bot.sendAudio(
             chat_id = channel,
             filename = fileName,
-            caption = "✏️ Title: " + title + "\n" + "👤 Artist: " + performer + "\n" + "🎼 Genre: " + genre, 
+            caption = "✏️ Title: " + title + "\n" + "👤 Artist: " + performer, 
             audio = fileID
         )
     else:
