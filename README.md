@@ -19,12 +19,8 @@ The added caption will be in this format :
 ```
 ✏️ Title: <title>
 👤 Artist: <artist>
-💽 Album: <album>
 🎼 Genre: <genre>
 ```
-
-<img src="https://github.com/samadii/channel-musics-caption-adder/blob/master/demo.png" width="450" />
-
 
 
 ## Deploy locally
