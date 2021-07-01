@@ -2,6 +2,7 @@
 
 
 ## How to use it ?
+
 Add the bot in your channel as admin,     
 Then send musics to the bot,                 
 Bot will post them with a dynamic caption in your channel as soon as they be received(in private).
