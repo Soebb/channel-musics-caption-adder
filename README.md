@@ -1,6 +1,8 @@
-Telegram Message Forwarder
-===
+# Channel Musics Caption Adder Bot
 
+
+## How use it?
+Just send musics to the bot, bot will post them with a dynamic caption in your channel as soon as they be received(in private).
 
 
 ## Deploy to Heroku
@@ -10,26 +12,21 @@ Telegram Message Forwarder
 
 
 
-## How to use.
+## Deploy locally
 1. Install dependencies
 ```bash
-git clone https://github.com/racterub/telegram-message-forwarder
-cd telegram-message-forwarder
+git clone https://github.com/samadii/channel-musics-caption-adder
+cd channel-musics-caption-adder
 pipenv install
 ```
-2. Change `config.py`
+2. Enter vars
 
-All settings were stored in `config.example.py`.
-After modifying it, the filename of `config.example.py` should be changed to `config.py`
 ```
-TOKEN -> The bot's token
-USERNAME -> The message sender you want to assign. 
-BOT_CHAT_ID = -> The channel you want to be forwarded to. (Format: -xxxxxxxx)
+BOT_TOKEN -> The bot's token
+CHANNEL_ID = -> The channel you want to be forwarded to. (Format: -xxxxxxxx)
 ```
 
 3. Run!
 ```bash
-pipenv run python serve.py
+pipenv run python main.py
 ```
-
-**This repo is licensed under the MIT license.**
