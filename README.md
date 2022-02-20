@@ -25,7 +25,7 @@ The added caption will be in this format :
 ## Deploy locally
 1. Install dependencies
 ```bash
-git clone https://github.com/samadii/channel-musics-caption-adder
+git clone https://github.com/Soebb/channel-musics-caption-adder
 cd channel-musics-caption-adder
 pipenv install
 ```
